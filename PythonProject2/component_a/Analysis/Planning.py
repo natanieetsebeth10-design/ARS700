@@ -6,8 +6,6 @@ start to the goal using Dijkstra's and A* algorithms.
 
 It compares both algorithms based on the number of nodes explored,
 runtime and path length. It also displays and saves the results.
-
-Run this script in PyCharm, not inside Webots.
 """
 
 import heapq
