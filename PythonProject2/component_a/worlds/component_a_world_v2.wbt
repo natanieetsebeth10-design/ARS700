@@ -1,0 +1,144 @@
+#VRML_SIM R2025a utf8
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+  info [
+    "Component A: Perception, Motion Planning and Control"
+  ]
+  title "Component A - Mobile Robot Navigation"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0943951023931957
+  position 0 0 4.5
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+  floorAppearance PBRAppearance {
+    baseColor 0.72 0.72 0.72
+    roughness 1
+    metalness 0
+  }
+  wallHeight 0.3
+  wallAppearance PBRAppearance {
+    baseColor 0.9 0.9 0.9
+    roughness 1
+    metalness 0
+  }
+}
+
+Solid {
+  translation 0.5 0.3 0.05
+  name "obstacle_1"
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.2 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.2 0.1
+  }
+}
+Solid {
+  translation -0.4 0.6 0.05
+  name "obstacle_2"
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.6 0.2
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.12
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.12
+  }
+}
+Solid {
+  translation 0.2 -0.5 0.05
+  name "obstacle_3"
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.2 0.2 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.15 0.4 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.15 0.4 0.1
+  }
+}
+Solid {
+  translation -0.7 -0.3 0.05
+  name "obstacle_4"
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.9 0.7 0.1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.3 0.15 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.3 0.15 0.1
+  }
+}
+
+Solid {
+  translation -0.38 -0.34 0.05
+  name "obstacle_5_hidden"
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.1 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.1
+      }
+    }
+  ]
+  boundingObject Box {
+    size 0.2 0.2 0.1
+  }
+}
+
+E-puck {
+  translation -1 -1 0
+  rotation 0 0 1 0.78
+  name "epuck"
+  controller "epuck_navigator"
+  supervisor TRUE
+  camera_width 128
+  camera_height 128
+}
