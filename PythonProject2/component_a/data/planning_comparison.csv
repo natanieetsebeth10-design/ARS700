@@ -1,0 +1,4 @@
+metric,dijkstra,astar
+nodes_explored,3212,2087
+runtime_s,0.034790,0.037423
+path_length_m,4.0000,4.0000

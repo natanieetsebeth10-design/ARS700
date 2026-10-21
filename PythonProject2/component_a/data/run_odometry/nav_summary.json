@@ -1,12 +1,12 @@
 {
   "reached": true,
   "pose_source": "odometry",
-  "t_end": 28.672,
-  "replans": 2,
+  "t_end": 24.864,
+  "replans": 1,
   "final_true_xy": [
-    0.34328432194009556,
-    1.3685080408225547
+    0.8779164852720167,
+    0.9662349129847188
   ],
-  "final_goal_error_m": 0.753042932348852,
-  "n_log_rows": 1790
+  "final_goal_error_m": 0.12666675044970258,
+  "n_log_rows": 1552
 }

@@ -1,17 +1,10 @@
 #VRML_SIM R2025a utf8
 
-# Load the background, lighting, floor, and e-puck robot.
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 
-# COMPONENT A: WORLD
-# This is the environment where the robot moves and detects obstacles.
-# The camera detects objects, while the 8 IR sensors detect nearby obstacles.
-# We use IR sensors instead of LiDAR because they are already built into the robot.
-
-# Set the simulation settings.
 WorldInfo {
   info [
     "Component A: Perception, Motion Planning and Control"
@@ -19,32 +12,20 @@ WorldInfo {
   title "Component A - Mobile Robot Navigation"
   basicTimeStep 16
 }
-
-# Set the camera view so we can see the robot and the environment.
 Viewpoint {
-  orientation -0.577 0.577 0.577 2.094
-  position 0 0 4.5
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.094
+  position 0.00012573972381084664 0.00012571104428207584 3.9488447778242977
 }
-
-# Add the background and lighting.
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
-
-# Create a square arena with a floor and walls.
 RectangleArena {
-  translation 0 0 0
   floorSize 3 3
-  floorTileSize 0.5 0.5
   wallHeight 0.3
 }
-
-# Obstacle 1: A small red box.
-# The robot must detect and avoid it.
 Solid {
   translation 0.5 0.3 0.05
-  name "obstacle_1"
   children [
     Shape {
       appearance PBRAppearance {
@@ -55,15 +36,13 @@ Solid {
       }
     }
   ]
+  name "obstacle_1"
   boundingObject Box {
     size 0.2 0.2 0.1
   }
 }
-
-# Obstacle 2: A green cylinder.
 Solid {
   translation -0.4 0.6 0.05
-  name "obstacle_2"
   children [
     Shape {
       appearance PBRAppearance {
@@ -75,16 +54,14 @@ Solid {
       }
     }
   ]
+  name "obstacle_2"
   boundingObject Cylinder {
     height 0.1
     radius 0.12
   }
 }
-
-# Obstacle 3: A long blue box.
 Solid {
   translation 0.2 -0.5 0.05
-  name "obstacle_3"
   children [
     Shape {
       appearance PBRAppearance {
@@ -95,15 +72,13 @@ Solid {
       }
     }
   ]
+  name "obstacle_3"
   boundingObject Box {
     size 0.15 0.4 0.1
   }
 }
-
-# Obstacle 4: A yellow box.
 Solid {
   translation -0.7 -0.3 0.05
-  name "obstacle_4"
   children [
     Shape {
       appearance PBRAppearance {
@@ -114,17 +89,16 @@ Solid {
       }
     }
   ]
+  name "obstacle_4"
   boundingObject Box {
     size 0.3 0.15 0.1
   }
 }
-
-# Add the e-puck robot to the arena.
-# Set its starting position, direction, and controller.
-# The camera resolution is set to 128 by 128 pixels.
 E-puck {
-  translation -1.0 -1.0 0
-  rotation 0 0 1 0.78
+  hidden position_0_0 -1.5303594835813783e-08
+  hidden position_0_1 -1.530360638213324e-08
+  translation -1.0000000000124516 -0.9999999999874114 -3.19809978945422e-05
+  rotation 3.3430399668793356e-09 1.3741064135441303e-09 1 0.7799999999999895
   name "epuck"
   controller "epuck_perception"
   camera_width 128
