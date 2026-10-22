@@ -1,17 +1,18 @@
 #VRML_SIM R2025a utf8
+
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 
 WorldInfo {
   title "Component B - multi-robot swarm"
-  basicTimeStep 32
-  coordinateSystem "ENU"
 }
 Viewpoint {
-  orientation 1.0000 -0.0000 -0.0000 0.5302
-  position 0.0 -1.7 2.9
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0 -3.7320671695199283e-16 3.361547262794322
 }
 Background {
-  skyColor [ 0.85 0.9 0.95 ]
+  skyColor [
+    0.85 0.9 0.95
+  ]
 }
 DirectionalLight {
   direction 0.3 0.6 -1
@@ -25,63 +26,109 @@ Solid {
   translation 0 0 -0.005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.82 0.82 0.78 roughness 1 metalness 0 }
-      geometry Box { size 2 2 0.01 }
+      appearance PBRAppearance {
+        baseColor 0.82 0.82 0.78
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 2 2 0.01
+      }
     }
   ]
   name "floor"
-  boundingObject Box { size 2 2 0.01 }
+  boundingObject Box {
+    size 2 2 0.01
+  }
 }
 Solid {
   translation 0 1.025 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 }
-      geometry Box { size 2.1 0.05 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 2.1 0.05 0.1
+      }
     }
   ]
   name "wall_n"
-  boundingObject Box { size 2.1 0.05 0.1 }
+  boundingObject Box {
+    size 2.1 0.05 0.1
+  }
 }
 Solid {
   translation 0 -1.025 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 }
-      geometry Box { size 2.1 0.05 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 2.1 0.05 0.1
+      }
     }
   ]
   name "wall_s"
-  boundingObject Box { size 2.1 0.05 0.1 }
+  boundingObject Box {
+    size 2.1 0.05 0.1
+  }
 }
 Solid {
   translation 1.025 0 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 }
-      geometry Box { size 0.05 2.1 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 2.1 0.1
+      }
     }
   ]
   name "wall_e"
-  boundingObject Box { size 0.05 2.1 0.1 }
+  boundingObject Box {
+    size 0.05 2.1 0.1
+  }
 }
 Solid {
   translation -1.025 0 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.45 0.45 0.5 roughness 1 metalness 0 }
-      geometry Box { size 0.05 2.1 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.45 0.45 0.5
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.05 2.1 0.1
+      }
     }
   ]
   name "wall_w"
-  boundingObject Box { size 0.05 2.1 0.1 }
+  boundingObject Box {
+    size 0.05 2.1 0.1
+  }
 }
 Solid {
   translation -0.75 -0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_0"
@@ -90,8 +137,14 @@ Solid {
   translation -0.25 -0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_1"
@@ -100,8 +153,14 @@ Solid {
   translation 0.25 -0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_2"
@@ -110,8 +169,14 @@ Solid {
   translation 0.75 -0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_3"
@@ -120,8 +185,14 @@ Solid {
   translation -0.75 -0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_4"
@@ -130,8 +201,14 @@ Solid {
   translation -0.25 -0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_5"
@@ -140,8 +217,14 @@ Solid {
   translation 0.25 -0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_6"
@@ -150,8 +233,14 @@ Solid {
   translation 0.75 -0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_7"
@@ -160,8 +249,14 @@ Solid {
   translation -0.75 0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_8"
@@ -170,8 +265,14 @@ Solid {
   translation -0.25 0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_9"
@@ -180,8 +281,14 @@ Solid {
   translation 0.25 0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.95 0.65 0.25
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_10"
@@ -190,8 +297,14 @@ Solid {
   translation 0.75 0.25 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.95 0.65 0.25
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_11"
@@ -200,8 +313,14 @@ Solid {
   translation -0.75 0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.70 0.82 0.74 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.7 0.82 0.74
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_12"
@@ -210,8 +329,14 @@ Solid {
   translation -0.25 0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.78 0.88 0.80 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.78 0.88 0.8
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_13"
@@ -220,8 +345,14 @@ Solid {
   translation 0.25 0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.95 0.65 0.25
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_14"
@@ -230,100 +361,204 @@ Solid {
   translation 0.75 0.75 0.0005
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.95 0.65 0.25 roughness 1 metalness 0 }
-      geometry Box { size 0.47 0.47 0.001 }
+      appearance PBRAppearance {
+        baseColor 0.95 0.65 0.25
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.47 0.47 0.001
+      }
     }
   ]
   name "sector_15"
 }
 Solid {
-  translation 0.0 0.0 0.05
+  translation 0 0 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.75 0.15 0.15 roughness 0.8 metalness 0 }
-      geometry Box { size 0.16 0.16 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.75 0.15 0.15
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.16 0.16 0.1
+      }
     }
   ]
   name "obstacle_0"
-  boundingObject Box { size 0.16 0.16 0.1 }
+  boundingObject Box {
+    size 0.16 0.16 0.1
+  }
 }
 Solid {
   translation -0.5 0.5 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.75 0.15 0.15 roughness 0.8 metalness 0 }
-      geometry Box { size 0.16 0.16 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.75 0.15 0.15
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.16 0.16 0.1
+      }
     }
   ]
   name "obstacle_1"
-  boundingObject Box { size 0.16 0.16 0.1 }
+  boundingObject Box {
+    size 0.16 0.16 0.1
+  }
 }
 Solid {
   translation 0.5 -0.5 0.05
   children [
     Shape {
-      appearance PBRAppearance { baseColor 0.75 0.15 0.15 roughness 0.8 metalness 0 }
-      geometry Box { size 0.16 0.16 0.1 }
+      appearance PBRAppearance {
+        baseColor 0.75 0.15 0.15
+        roughness 0.8
+        metalness 0
+      }
+      geometry Box {
+        size 0.16 0.16 0.1
+      }
     }
   ]
   name "obstacle_2"
-  boundingObject Box { size 0.16 0.16 0.1 }
+  boundingObject Box {
+    size 0.16 0.16 0.1
+  }
 }
 DEF EPUCK0 E-puck {
-  translation -0.85 -0.85 0
-  rotation 0 0 1 0.785398
+  hidden position_0_0 81.07486298360692
+  hidden position_0_1 79.71778973622662
+  hidden linearVelocity_0 0.00010188027875976994 2.6401229888742666e-05 4.2108913428605407e-08
+  hidden angularVelocity_0 -0.0017600625479547007 0.00679194354955794 -4.682905943260594e-13
+  hidden rotation_1 0 1 0 5.6766392974518824
+  hidden linearVelocity_1 0.00013583921886210808 3.520134110689519e-05 6.738432171054251e-12
+  hidden angularVelocity_1 -0.0017600625514867913 0.006791943564099797 2.48588170128574e-10
+  hidden rotation_2 0 1 0 4.3195660500715825
+  hidden linearVelocity_2 0.0001358392186249663 3.5201341051071096e-05 6.098588504988913e-12
+  hidden angularVelocity_2 -0.0017600625524262102 0.006791943563827886 -2.4952535104578845e-10
+  translation 0.14329369674153755 0.22396786137956967 -6.394788059581671e-05
+  rotation -0.0006147797230400871 0.004823153162023275 0.9999881795498724 0.2535650768785258
   name "epuck0"
   controller "swarm_agent"
-  controllerArgs [ "centralised" ]
+  controllerArgs [
+    "centralised"
+  ]
   turretSlot [
-    GPS { name "gps" }
-    Compass { name "compass" }
-    Emitter { name "swarm_tx" }
-    Receiver { name "swarm_rx" }
+    GPS {
+    }
+    Compass {
+    }
+    Emitter {
+      name "swarm_tx"
+    }
+    Receiver {
+      name "swarm_rx"
+    }
   ]
 }
 DEF EPUCK1 E-puck {
-  translation 0.85 -0.85 0
-  rotation 0 0 1 2.356194
+  hidden position_0_0 51.892172851471514
+  hidden position_0_1 49.54589011799802
+  hidden linearVelocity_0 2.1375651620514345e-06 0.00014600098979472112 -3.786919156307914e-08
+  hidden angularVelocity_0 -0.009733413156497122 0.00014250454676938056 -2.0100022057874503e-11
+  hidden rotation_1 0 1 0 1.6266903940348223
+  hidden linearVelocity_1 2.8500864977945975e-06 0.00019466796041499827 -1.4587442379961548e-11
+  hidden angularVelocity_1 -0.009733413143904341 0.00014250454669159475 7.657114921175179e-12
+  hidden rotation_2 0 -0.9999999999999999 0 0.7195923394386713
+  hidden linearVelocity_2 2.850086498915998e-06 0.00019466795989554384 -1.43339562096086e-11
+  hidden angularVelocity_2 -0.00973341314387644 0.00014250454714490464 -4.785494570543731e-11
+  translation 0.7730955553170257 0.1441140613239809 -6.395979799431531e-05
+  rotation 0.00026811025465240735 -0.0002720634622621145 0.9999999270491792 1.5561566871551824
   name "epuck1"
   controller "swarm_agent"
-  controllerArgs [ "centralised" ]
+  controllerArgs [
+    "centralised"
+  ]
   turretSlot [
-    GPS { name "gps" }
-    Compass { name "compass" }
-    Emitter { name "swarm_tx" }
-    Receiver { name "swarm_rx" }
+    GPS {
+    }
+    Compass {
+    }
+    Emitter {
+      name "swarm_tx"
+    }
+    Receiver {
+      name "swarm_rx"
+    }
   ]
 }
 DEF EPUCK2 E-puck {
-  translation 0.85 0.85 0
-  rotation 0 0 1 -2.356194
+  hidden position_0_0 26.921821276485844
+  hidden position_0_1 24.12242172375749
+  hidden linearVelocity_0 4.059311506234601e-05 -8.638340517736285e-06 -1.6280475231652222e-08
+  hidden angularVelocity_0 0.0005759035067737222 0.0027062741103996055 7.260110100795505e-12
+  hidden rotation_1 0 1 0 1.7890800477674977
+  hidden linearVelocity_1 5.412497849496499e-05 -1.151796293739726e-05 2.0586732328811e-11
+  hidden angularVelocity_1 0.0005759035018169609 0.002706274089553057 1.6944295547902693e-10
+  hidden rotation_2 0 -1 0 1.0103195049608555
+  hidden linearVelocity_2 5.412497843112836e-05 -1.1517962926006808e-05 2.0548895862511233e-11
+  hidden angularVelocity_2 0.0005759035019867932 0.002706274089469535 -1.549212949647088e-10
+  translation 0.35958196051256786 0.7568939373285956 -6.394419055259434e-05
+  rotation -0.0006761764469092648 7.114982777754203e-05 0.9999997688615305 2.9319173268072527
   name "epuck2"
   controller "swarm_agent"
-  controllerArgs [ "centralised" ]
+  controllerArgs [
+    "centralised"
+  ]
   turretSlot [
-    GPS { name "gps" }
-    Compass { name "compass" }
-    Emitter { name "swarm_tx" }
-    Receiver { name "swarm_rx" }
+    GPS {
+    }
+    Compass {
+    }
+    Emitter {
+      name "swarm_tx"
+    }
+    Receiver {
+      name "swarm_rx"
+    }
   ]
 }
 DEF EPUCK3 E-puck {
-  translation -0.85 0.85 0
-  rotation 0 0 1 -0.785398
+  hidden position_0_0 80.80189836344714
+  hidden position_0_1 83.04179617985994
+  hidden linearVelocity_0 0.00014164230348517862 -4.457852489465205e-06 3.535828582820631e-08
+  hidden angularVelocity_0 0.0002971881890129552 0.009442757425301037 -8.831454925335027e-12
+  hidden rotation_1 0 1 0 5.403674677292099
+  hidden linearVelocity_1 0.00018885536422835216 -5.943770577207705e-06 -9.664802249759892e-12
+  hidden angularVelocity_1 0.00029718818951537853 0.009442757434264436 2.2016650228822427e-10
+  hidden rotation_2 0 -1 0 4.922798120654267
+  hidden linearVelocity_2 0.0001888553636091559 -5.943770551215334e-06 -9.533351847720215e-12
+  hidden angularVelocity_2 0.0002971881893100194 0.009442757434249164 -2.3782940080869825e-10
+  translation 0.6485824675404966 0.7937793978395764 -6.395491182116693e-05
+  rotation 0.0004524886089204813 0.028759472115851156 -0.9995862584177898 0.03147524197308078
   name "epuck3"
   controller "swarm_agent"
-  controllerArgs [ "centralised" ]
+  controllerArgs [
+    "centralised"
+  ]
   turretSlot [
-    GPS { name "gps" }
-    Compass { name "compass" }
-    Emitter { name "swarm_tx" }
-    Receiver { name "swarm_rx" }
+    GPS {
+    }
+    Compass {
+    }
+    Emitter {
+      name "swarm_tx"
+    }
+    Receiver {
+      name "swarm_rx"
+    }
   ]
 }
 Robot {
   name "supervisor"
   controller "swarm_supervisor"
-  controllerArgs [ "centralised" ]
+  controllerArgs [
+    "centralised"
+  ]
   supervisor TRUE
 }

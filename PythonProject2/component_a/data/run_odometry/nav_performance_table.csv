@@ -1,0 +1,20 @@
+metric,value
+Goal reached (controller's belief),Yes
+Localisation source,odometry
+"Final distance to goal (true, m)",0.127
+Time to goal (s),24.8
+"Initial planned length (known map, m)",2.865
+"Optimal length on true map (A*, m)",2.892
+Actual distance travelled (m),2.925
+Path efficiency (optimal / actual),0.989
+Mean speed (m/s),0.118
+Replans triggered by perception,1
+Mean cross-track error (m),0.0357
+RMS cross-track error (m),0.0424
+Max cross-track error (m),0.0678
+Mean |heading error| (deg),3.37
+Mean odometry error vs truth (m),0.0401
+Final odometry error vs truth (m),0.0855
+Min clearance to obstacles (m),0.0033
+Collision (clearance < 0),No
+Time in SLOW / ESTOP (s),0.0 / 0.0

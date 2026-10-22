@@ -20,7 +20,7 @@
     ],
     "grid_path_len": 82,
     "nodes_explored": 2121,
-    "runtime_s": 0.020868600004178006,
+    "runtime_s": 0.02383910000207834,
     "t": 0.0,
     "reason": "initial"
   },
@@ -49,7 +49,7 @@
     ],
     "grid_path_len": 63,
     "nodes_explored": 950,
-    "runtime_s": 0.00860370000009425,
+    "runtime_s": 0.010141100006876513,
     "t": 5.856,
     "reason": "replan"
   }

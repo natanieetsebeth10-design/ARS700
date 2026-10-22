@@ -16,20 +16,32 @@ import json
 import os
 import sys
 
-import matplotlib
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(HERE, "..", "controllers", "swarm_agent"))
-import swarm_core as sc                      # noqa: E402
-from swarm_sim import SwarmSim               # noqa: E402
 
-OUT = os.path.join(HERE, "..", "outputs")
+# Go up from worlds/analysis to component_b
+COMPONENT_B = os.path.dirname(os.path.dirname(HERE))
+
+sys.path.insert(0, HERE)
+sys.path.insert(
+    0, os.path.join(COMPONENT_B, "controllers", "swarm_agent")
+)
+
+import swarm_core as sc  # noqa: E402
+from swarm_sim import SwarmSim  # noqa: E402
+
+OUT = os.path.join(COMPONENT_B, "outputs")
 os.makedirs(OUT, exist_ok=True)
-plt.rcParams.update({"figure.dpi": 130, "axes.grid": True, "grid.alpha": 0.3, "font.size": 9})
+
+plt.rcParams.update({
+    "figure.dpi": 130,
+    "axes.grid": True,
+    "grid.alpha": 0.3,
+    "font.size": 9
+})
+
 AGENT_COLOURS = ["#1b9e77", "#d95f02", "#7570b3", "#e7298a"]
 N = sc.N_AGENTS
 centres = sc.sector_centres()
@@ -72,7 +84,12 @@ for q in (0.0, 0.3, 0.6):
 ax[2].set(title="Robustness to link failures (ring, mean of 30)", xlabel="round k", ylabel="max |x_i - mean|")
 ax[2].legend(fontsize=7)
 fig.tight_layout()
-fig.savefig(os.path.join(OUT, "B2_1_consensus.png"))
+fig.savefig(
+    os.path.join(OUT, "B2_1_consensus.png"),
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.show()
 plt.close(fig)
 results["consensus_rate_by_topology"] = rates
 
@@ -80,6 +97,7 @@ results["consensus_rate_by_topology"] = rates
 h = sc.average_consensus(x0, topologies["ring"], 200)
 spread0 = np.max(np.abs(x0 - x0.mean()))
 results["ring_rounds_to_1pct"] = int(np.argmax(np.max(np.abs(h - x0.mean()), axis=1) < 0.01 * spread0))
+
 print("   rates", {k: round(v, 3) for k, v in rates.items()}, "| ring rounds to 1%:", results["ring_rounds_to_1pct"])
 
 # B2.2 Leader election
@@ -97,7 +115,12 @@ for name, f in (("ring", sc.ring_adjacency), ("path", sc.path_adjacency), ("full
 ax[1].set(title="Rounds to elect a leader vs team size", xlabel="number of agents", ylabel="rounds")
 ax[1].legend()
 fig.tight_layout()
-fig.savefig(os.path.join(OUT, "B2_2_leader_election.png"))
+fig.savefig(
+    os.path.join(OUT, "B2_2_leader_election.png"),
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.show()
 plt.close(fig)
 results["leader_election_rounds_ring4"] = agree
 
@@ -164,7 +187,12 @@ for i, st in enumerate(sc.STARTS):
     ax[1].text(st[0], st[1] - 0.12, f"A{i}", ha="center", fontsize=8)
 ax[1].grid(False)
 fig.tight_layout()
-fig.savefig(os.path.join(OUT, "B2_3_pso_allocation.png"))
+fig.savefig(
+    os.path.join(OUT, "B2_3_pso_allocation.png"),
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.show()
 plt.close(fig)
 
 times_plan = sc.agent_times(plan, sc.STARTS, centres, N)
@@ -178,6 +206,7 @@ results["pso"] = dict(
 print("   central %.1f±%.1f | distributed %.1f±%.1f | greedy %.1f | reference %.1f | agree %.0f%%" % (
     cent_hist[:, -1].mean(), cent_hist[:, -1].std(), dist_hist[:, -1].mean(), dist_hist[:, -1].std(),
     greedy_cost, ref_best, 100 * np.mean(dist_agree)))
+
 
 # B2.4 Group behaviour
 # Run the distributed plan in the simulator using the obstacle-avoidance policy.
@@ -216,7 +245,12 @@ for bar, v in zip(bars, [o_greedy["time"], out["time"]]):
     ax[1].text(bar.get_x() + bar.get_width() / 2, v + 0.5, f"{v:.1f} s", ha="center", fontsize=9)
 ax[1].set(title="Time to cover all 16 sectors (kinematic execution)", ylabel="mission time (s)")
 fig.tight_layout()
-fig.savefig(os.path.join(OUT, "B2_4_emergent_behaviour.png"))
+fig.savefig(
+    os.path.join(OUT, "B2_4_emergent_behaviour.png"),
+    dpi=300,
+    bbox_inches="tight"
+)
+plt.show()
 plt.close(fig)
 results["execution"] = dict(policy=policy_name, mission_time_s=out["time"], success=bool(out["success"]),
                             collisions=out["collisions"], greedy_mission_time_s=o_greedy["time"])

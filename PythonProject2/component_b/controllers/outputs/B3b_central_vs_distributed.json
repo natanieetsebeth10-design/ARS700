@@ -83,21 +83,21 @@
     }
   },
   "latency_and_load": {
-    "eval_time_us": 60.652600004686974,
+    "eval_time_us": 47.8278000082355,
     "round_period_s": 0.1,
     "centralised": {
       "messages": 6,
       "evals_on_busiest_robot": 4040,
-      "compute_s": 0.24503650401893537,
+      "compute_s": 0.19322431203327142,
       "comm_rounds": 3,
-      "decision_latency_s": 0.5450365040189354
+      "decision_latency_s": 0.49322431203327144
     },
     "distributed": {
       "messages": 800,
       "evals_on_busiest_robot": 1010,
-      "compute_s": 0.06125912600473384,
+      "compute_s": 0.048306078008317856,
       "comm_rounds": 100,
-      "decision_latency_s": 10.061259126004733
+      "decision_latency_s": 10.048306078008318
     }
   },
   "closed_loop": {

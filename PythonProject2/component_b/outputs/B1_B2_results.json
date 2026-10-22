@@ -1,0 +1,52 @@
+{
+  "consensus_rate_by_topology": {
+    "ring": 0.3333333333333336,
+    "path": 0.8047378541243652,
+    "star": 0.75,
+    "fully connected": 0.0
+  },
+  "ring_rounds_to_1pct": 5,
+  "leader_election_rounds_ring4": 2,
+  "pso": {
+    "iterations": 100,
+    "particles_total": 40,
+    "central_final_mean": 47.38903055845546,
+    "central_final_sd": 2.2603581052875525,
+    "distributed_final_mean": 48.59724484219558,
+    "distributed_final_sd": 1.4465008872837464,
+    "greedy_cost": 66.4847866390899,
+    "annealing_reference": 44.06180167386148,
+    "distributed_agents_agree_fraction": 1.0,
+    "plan_agent_times_s": [
+      38.1,
+      29.3,
+      46.3,
+      41.1
+    ],
+    "plan": [
+      0,
+      0,
+      0,
+      1,
+      3,
+      0,
+      0,
+      1,
+      3,
+      3,
+      2,
+      1,
+      3,
+      3,
+      2,
+      2
+    ]
+  },
+  "execution": {
+    "policy": "expert rules (run B3 first for the neural net)",
+    "mission_time_s": 39.936,
+    "success": true,
+    "collisions": 0,
+    "greedy_mission_time_s": 54.4
+  }
+}

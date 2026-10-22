@@ -14,8 +14,19 @@ import sys
 
 import numpy as np
 
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "controllers", "swarm_agent"))
-import swarm_core as sc  # noqa: E402
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+# Go up two levels: worlds/analysis -> component_b
+COMPONENT_B = os.path.dirname(os.path.dirname(HERE))
+
+SWARM_AGENT_DIR = os.path.join(
+    COMPONENT_B, "controllers", "swarm_agent"
+)
+
+if SWARM_AGENT_DIR not in sys.path:
+    sys.path.insert(0, SWARM_AGENT_DIR)
+
+import swarm_core as sc
 
 _RAY_D = np.linspace(0.0, sc.IR_RANGE, 29)
 

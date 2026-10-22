@@ -1,0 +1,27 @@
+{
+  "mode": "distributed",
+  "complete": false,
+  "mission_time_s": 260.032,
+  "sectors_done": 10,
+  "sector_done_times": [
+    1.856,
+    null,
+    null,
+    1.856,
+    null,
+    24.96,
+    null,
+    18.176000000000002,
+    null,
+    null,
+    69.248,
+    42.24,
+    1.856,
+    18.624,
+    26.752,
+    62.496
+  ],
+  "robot_robot_contacts": 0,
+  "robot_obstacle_contacts": 0,
+  "min_robot_separation_m": 0.08112578488985493
+}

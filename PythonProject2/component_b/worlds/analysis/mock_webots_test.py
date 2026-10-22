@@ -21,9 +21,17 @@ import types
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+# Go up from worlds/analysis to component_b
+COMPONENT_B = os.path.dirname(os.path.dirname(HERE))
+
 sys.path.insert(0, HERE)
-sys.path.insert(0, os.path.join(HERE, "..", "controllers", "swarm_agent"))
-sys.path.insert(0, os.path.join(HERE, "..", "controllers", "swarm_supervisor"))
+sys.path.insert(
+    0, os.path.join(COMPONENT_B, "controllers", "swarm_agent")
+)
+sys.path.insert(
+    0, os.path.join(COMPONENT_B, "controllers", "swarm_supervisor")
+)
 
 import swarm_core as sc  # noqa: E402
 from swarm_sim import SwarmSim  # noqa: E402
