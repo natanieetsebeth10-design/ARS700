@@ -1,0 +1,27 @@
+{
+  "mode": "collect",
+  "complete": false,
+  "mission_time_s": 260.032,
+  "sectors_done": 5,
+  "sector_done_times": [
+    1.856,
+    null,
+    null,
+    1.856,
+    null,
+    27.04,
+    null,
+    null,
+    null,
+    34.4,
+    null,
+    null,
+    1.856,
+    null,
+    null,
+    null
+  ],
+  "robot_robot_contacts": 1,
+  "robot_obstacle_contacts": 0,
+  "min_robot_separation_m": 0.07373786729623973
+}

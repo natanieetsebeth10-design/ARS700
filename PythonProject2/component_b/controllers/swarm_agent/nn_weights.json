@@ -1,0 +1,152 @@
+{
+  "dataset": {
+    "total": 20000,
+    "synthetic": 20000,
+    "webots": 0,
+    "class_frequency": {
+      "forward": 0.8162,
+      "left": 0.0822,
+      "right": 0.0756,
+      "reverse": 0.026
+    }
+  },
+  "architecture_sweep": {
+    "8-4": {
+      "val_acc": 0.944,
+      "params": 36
+    },
+    "8-8-4": {
+      "val_acc": 0.964,
+      "params": 108
+    },
+    "8-16-16-4": {
+      "val_acc": 0.967,
+      "params": 484
+    },
+    "8-32-32-4": {
+      "val_acc": 0.969,
+      "params": 1476
+    }
+  },
+  "test": {
+    "accuracy": 0.9656666666666667,
+    "majority_baseline": 0.8153333333333334,
+    "rules_on_noisy_input": 0.9473333333333334,
+    "per_class": {
+      "forward": {
+        "precision": 0.9859909353110836,
+        "recall": 0.9783319705641864,
+        "f1": 0.9821465216499077,
+        "support": 2446
+      },
+      "left": {
+        "precision": 0.8793774319066148,
+        "recall": 0.9149797570850202,
+        "f1": 0.8968253968253969,
+        "support": 247
+      },
+      "right": {
+        "precision": 0.8571428571428571,
+        "recall": 0.8898305084745762,
+        "f1": 0.8731808731808732,
+        "support": 236
+      },
+      "reverse": {
+        "precision": 0.9577464788732394,
+        "recall": 0.9577464788732394,
+        "f1": 0.9577464788732394,
+        "support": 71
+      }
+    },
+    "confusion_matrix": [
+      [
+        2393,
+        23,
+        30,
+        0
+      ],
+      [
+        16,
+        226,
+        2,
+        3
+      ],
+      [
+        18,
+        8,
+        210,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        68
+      ]
+    ]
+  },
+  "accuracy_vs_noise": {
+    "sigma": [
+      0,
+      15,
+      40,
+      80,
+      120,
+      200
+    ],
+    "nn": [
+      0.989,
+      0.9813333333333333,
+      0.973,
+      0.9146666666666666,
+      0.7956666666666666,
+      0.5373333333333333
+    ],
+    "rules": [
+      1.0,
+      0.9913333333333333,
+      0.969,
+      0.8513333333333334,
+      0.6676666666666666,
+      0.43733333333333335
+    ]
+  },
+  "closed_loop": {
+    "neural network | sigma=15": {
+      "success_rate": 0.9866666666666667,
+      "collisions_per_mission": 0.013333333333333334,
+      "mean_time_s": 14.631466666666665,
+      "mean_reward": 9.20176
+    },
+    "rule set on noisy IR | sigma=15": {
+      "success_rate": 1.0,
+      "collisions_per_mission": 0.0,
+      "mean_time_s": 14.614613333333333,
+      "mean_reward": 9.269269333333336
+    },
+    "no avoidance | sigma=15": {
+      "success_rate": 0.72,
+      "collisions_per_mission": 0.28,
+      "mean_time_s": 13.040296296296297,
+      "mean_reward": 4.490549333333334
+    },
+    "neural network | sigma=60": {
+      "success_rate": 1.0,
+      "collisions_per_mission": 0.0,
+      "mean_time_s": 16.275626666666668,
+      "mean_reward": 9.186218666666667
+    },
+    "rule set on noisy IR | sigma=60": {
+      "success_rate": 1.0,
+      "collisions_per_mission": 0.0,
+      "mean_time_s": 22.208213333333333,
+      "mean_reward": 8.889589333333333
+    },
+    "no avoidance | sigma=60": {
+      "success_rate": 0.72,
+      "collisions_per_mission": 0.28,
+      "mean_time_s": 13.040296296296297,
+      "mean_reward": 4.490549333333334
+    }
+  }
+}

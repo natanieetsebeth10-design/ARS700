@@ -1,0 +1,129 @@
+{
+  "plan_level": {
+    "centralised": {
+      "0.0": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.956999486016045
+      },
+      "0.1": {
+        "coverage": 0.8875,
+        "full_coverage_rate": 0.58,
+        "makespan_mean_s": 45.87936702449064
+      },
+      "0.2": {
+        "coverage": 0.83,
+        "full_coverage_rate": 0.45,
+        "makespan_mean_s": 47.025596583525115
+      },
+      "0.3": {
+        "coverage": 0.74875,
+        "full_coverage_rate": 0.24,
+        "makespan_mean_s": 49.44155926238534
+      },
+      "0.5": {
+        "coverage": 0.628125,
+        "full_coverage_rate": 0.08,
+        "makespan_mean_s": 52.10116972957183
+      }
+    },
+    "centralised + 3 retries": {
+      "0.0": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.40647810245462
+      },
+      "0.1": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.40647810245462
+      },
+      "0.2": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.40647810245462
+      },
+      "0.3": {
+        "coverage": 0.994375,
+        "full_coverage_rate": 0.98,
+        "makespan_mean_s": 44.5230170056907
+      },
+      "0.5": {
+        "coverage": 0.97125,
+        "full_coverage_rate": 0.9,
+        "makespan_mean_s": 45.02831511520835
+      }
+    },
+    "distributed": {
+      "0.0": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.663584976112624
+      },
+      "0.1": {
+        "coverage": 1.0,
+        "full_coverage_rate": 1.0,
+        "makespan_mean_s": 44.762738255837036
+      },
+      "0.2": {
+        "coverage": 0.996875,
+        "full_coverage_rate": 0.96,
+        "makespan_mean_s": 44.7939401713906
+      },
+      "0.3": {
+        "coverage": 0.995625,
+        "full_coverage_rate": 0.95,
+        "makespan_mean_s": 44.455842939753204
+      },
+      "0.5": {
+        "coverage": 0.996875,
+        "full_coverage_rate": 0.96,
+        "makespan_mean_s": 44.59754435838727
+      }
+    }
+  },
+  "latency_and_load": {
+    "eval_time_us": 60.652600004686974,
+    "round_period_s": 0.1,
+    "centralised": {
+      "messages": 6,
+      "evals_on_busiest_robot": 4040,
+      "compute_s": 0.24503650401893537,
+      "comm_rounds": 3,
+      "decision_latency_s": 0.5450365040189354
+    },
+    "distributed": {
+      "messages": 800,
+      "evals_on_busiest_robot": 1010,
+      "compute_s": 0.06125912600473384,
+      "comm_rounds": 100,
+      "decision_latency_s": 10.061259126004733
+    }
+  },
+  "closed_loop": {
+    "centralised | loss=0.0": {
+      "success_rate": 1.0,
+      "mean_coverage": 1.0,
+      "mission_time_s": 38.793600000000005,
+      "collisions_per_run": 0.0
+    },
+    "distributed | loss=0.0": {
+      "success_rate": 1.0,
+      "mean_coverage": 1.0,
+      "mission_time_s": 36.592,
+      "collisions_per_run": 0.05
+    },
+    "centralised | loss=0.3": {
+      "success_rate": 0.3,
+      "mean_coverage": 0.81875,
+      "mission_time_s": 40.384,
+      "collisions_per_run": 0.05
+    },
+    "distributed | loss=0.3": {
+      "success_rate": 0.95,
+      "mean_coverage": 0.996875,
+      "mission_time_s": 37.15705263157894,
+      "collisions_per_run": 0.0
+    }
+  }
+}
